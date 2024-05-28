@@ -1,0 +1,11 @@
+{
+    "cafe1": {
+        "recognition": "TemplateMatch",
+        "template": "ba.png",
+        "action": "Click",
+        "post_delay": 10000,
+        "next": [
+            "mid1"
+        ]
+    }
+}
