@@ -1,6 +1,6 @@
-# MaaPracticeBoilerplate
+瞎写的ba日常脚本  龟速更新
+只支持日服  
 
-MaaFramework 实践模板。
 
 ## 如何开发
 
