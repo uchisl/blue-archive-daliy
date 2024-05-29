@@ -1,0 +1,83 @@
+{
+    "cafe": {
+        "recognition": "TemplateMatch",
+        "template": "home.png",
+        "next": [
+            "incafe"
+        ]
+    },
+    "incafe": {
+        "recognition": "TemplateMatch",
+        "template": "cafe.png",
+        "action": "Click",
+        "post_wait_freezes": 5000,
+        "post_delay": 3000,
+        "next": [
+            "sub_closecafe",
+            "sub_haogan",
+            "sub_jiban",
+            "shoutili"
+        ]
+    },
+    "sub_closecafe": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "close2.png",
+        "action": "Click"
+    },
+    "sub_haogan": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "好感.png",
+        "threshold": 0.5,
+        "action": "Click",
+        "target_offset": [
+            20,
+            20,
+            20,
+            20
+        ],
+        "green_mask": true
+    },
+    "sub_jiban": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "羁绊.png",
+        "action": "Click",
+        "post_wait_freezes": 2000
+    },
+    "shoutili": {
+        "recognition": "TemplateMatch",
+        "template": "咖啡厅体力.png",
+        "threshold": 0.65,
+        "action": "Click",
+        "pre_wait_freezes": 500,
+        "next": [
+            "获取体力"
+        ]
+    },
+    "获取体力": {
+        "recognition": "OCR",
+        "expected": "受取",
+        "action": "Click",
+        "next": [
+            "home",
+            "sub_huode",
+            "sub_back"
+        ]
+    },
+    "sub_huode": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "获得.png",
+        "action": "Click"
+    },
+    "sub_back": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "back.png",
+        "threshold": 0.8,
+        "action": "Click",
+        "pre_wait_freezes": 500
+    }
+}
