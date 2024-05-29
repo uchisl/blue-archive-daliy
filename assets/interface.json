@@ -31,8 +31,12 @@
     ],
     "task": [
         {
-            "name": "start",
+            "name": "启动游戏",
             "entry": "startup"
+        },
+        {
+            "name": "咖啡厅",
+            "entry": "cafe"
         }
     ]
 }
