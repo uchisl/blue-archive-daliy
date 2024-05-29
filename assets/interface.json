@@ -31,7 +31,7 @@
     ],
     "task": [
         {
-            "name": "进入游戏",
+            "name": "start",
             "entry": "startup"
         }
     ]

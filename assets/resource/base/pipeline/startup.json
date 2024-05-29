@@ -1,0 +1,103 @@
+{
+    "startup": {
+        "next": [
+            "home",
+            "sub_closeinfo",
+            "sub_loading",
+            "Clickstart",
+            "sub_update",
+            "ipban",
+            "sub_data",
+            "sub_catalog",
+            "sub_yostarlogo",
+            "sub_startapp"
+        ]
+    },
+    "sub_loading": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "green_mask": true,
+        "template": "loading.png",
+        "post_wait_freezes": 7000
+    },
+    "sub_update": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "指名.png",
+        "action": "DoNothing"
+    },
+    "sub_catalog": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "roi": [
+            64,
+            677,
+            161,
+            34
+        ],
+        "expected": "Catalog"
+    },
+    "sub_data": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "roi": [
+            426,
+            670,
+            217,
+            46
+        ],
+        "expected": "Data"
+    },
+    "ipban": {
+        "recognition": "TemplateMatch",
+        "template": "pvp.png",
+        "action": "StopApp",
+        "package": "com.YostarJP.BlueArchive/com.yostarjp.bluearchive.MxUnityPlayerActivity"
+    },
+    "sub_startapp": {
+        "is_sub": true,
+        "action": "StartApp",
+        "package": "com.YostarJP.BlueArchive/com.yostarjp.bluearchive.MxUnityPlayerActivity"
+    },
+    "sub_yostarlogo": {
+        "recognition": "TemplateMatch",
+        "template": "yostar.png",
+        "next": [
+            "sub_yostarlogo",
+            "sub_catalog",
+            "ipban",
+            "sub_update",
+            "sub_data",
+            "Clickstart",
+            "sub_loading"
+        ]
+    },
+    "Clickstart": {
+        "recognition": "TemplateMatch",
+        "template": "yostar2.png",
+        "action": "Click",
+        "target": [
+            633,
+            364,
+            647,
+            356
+        ],
+        "post_wait_freezes": 7000,
+        "next": [
+            "home",
+            "sub_closeinfo",
+            "sub_loading"
+        ]
+    },
+    "sub_closeinfo": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "close.png",
+        "action": "Click"
+    },
+    "home": {
+        "recognition": "TemplateMatch",
+        "template": "home.png",
+        "action": "DoNothing"
+    }
+}
