@@ -1,0 +1,54 @@
+{
+    "school": {
+        "recognition": "TemplateMatch",
+        "template": "home.png",
+        "action": "DoNothing",
+        "next": [
+            "sub_inschool",
+            "schoolticket7"
+        ]
+    },
+    "sub_inschool": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "school.png",
+        "action": "Click"
+    },
+    "schoolticket7": {
+        "recognition": "TemplateMatch",
+        "template": "7/7.png",
+        "post_wait_freezes": 1000,
+        "next": [
+            "schel1"
+        ]
+    },
+    "schel1": {
+        "recognition": "TemplateMatch",
+        "template": "schel1.png",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next": [
+            "choose1"
+        ]
+    },
+    "choose1": {
+        "recognition": "TemplateMatch",
+        "template": "choose1.png",
+        "action": "Click",
+        "next": [
+            "schoolticket4",
+            "sub_schoolstart",
+            "sub_菜园",
+            "sub_食堂",
+            "sub_gamecenter"
+        ]
+    },
+    "in_schoolticket4": {
+        "recognition": "TemplateMatch",
+        "template": "4/7.png",
+        "next": [
+            "sub_schoolback",
+            "out_schoolticket4"
+        ]
+    }
+}
