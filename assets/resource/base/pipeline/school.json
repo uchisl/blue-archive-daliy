@@ -12,11 +12,12 @@
         "is_sub": true,
         "recognition": "TemplateMatch",
         "template": "school.png",
-        "action": "Click"
+        "action": "Click",
+        "post_wait_freezes": 2000
     },
     "schoolticket7": {
         "recognition": "TemplateMatch",
-        "template": "7/7.png",
+        "template": "7-7.png",
         "post_wait_freezes": 1000,
         "next": [
             "schel1"
@@ -28,27 +29,162 @@
         "action": "Click",
         "post_wait_freezes": 1000,
         "next": [
-            "choose1"
+            "schel_choose1"
         ]
     },
-    "choose1": {
+    "schel_choose1": {
         "recognition": "TemplateMatch",
         "template": "choose1.png",
         "action": "Click",
         "next": [
-            "schoolticket4",
+            "in_schoolticket4",
+            "sub_ok",
             "sub_schoolstart",
+            "sub_jiban",
             "sub_菜园",
             "sub_食堂",
             "sub_gamecenter"
         ]
     },
+    "sub_ok": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "ok.png",
+        "action": "Click",
+        "post_wait_freezes": 1000
+    },
+    "sub_schoolstart": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "schoolstart.png",
+        "action": "Click",
+        "post_wait_freezes": 1000
+    },
+    "sub_菜园": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "菜园.png",
+        "threshold": 0.995,
+        "action": "Click",
+        "post_wait_freezes": 1000
+    },
+    "sub_食堂": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "食堂.png",
+        "threshold": 0.995,
+        "action": "Click",
+        "post_wait_freezes": 1000
+    },
+    "sub_gamecenter": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "gamecenter.png",
+        "threshold": 0.995,
+        "action": "Click",
+        "post_wait_freezes": 1000
+    },
     "in_schoolticket4": {
         "recognition": "TemplateMatch",
-        "template": "4/7.png",
+        "template": "in4-7.png",
         "next": [
-            "sub_schoolback",
-            "out_schoolticket4"
+            "out_schoolticket4",
+            "sub_schoolback"
+        ]
+    },
+    "sub_schoolback": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "back2.png",
+        "action": "Click",
+        "post_wait_freezes": 1500
+    },
+    "out_schoolticket4": {
+        "recognition": "TemplateMatch",
+        "template": "out4-7.png",
+        "threshold": 0.8,
+        "next": [
+            "schel2",
+            "sub_swipe"
+        ]
+    },
+    "sub_swipe": {
+        "is_sub": true,
+        "action": "Swipe",
+        "begin": [
+            816,
+            624,
+            464,
+            96
+        ],
+        "end": [
+            836,
+            166,
+            444,
+            554
+        ]
+    },
+    "schel2": {
+        "recognition": "TemplateMatch",
+        "template": "schel2.png",
+        "action": "Click",
+        "next": [
+            "schel_choose2"
+        ]
+    },
+    "schel_choose2": {
+        "recognition": "TemplateMatch",
+        "template": "choose1.png",
+        "action": "Click",
+        "next": [
+            "schoolticket0",
+            "sub_ok",
+            "sub_schoolstart",
+            "sub_jiban",
+            "sub_du4",
+            "sub_du5",
+            "sub_du6",
+            "sub_du7"
+        ]
+    },
+    "sub_du4": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "du4.png",
+        "threshold": 0.995,
+        "action": "Click",
+        "post_wait_freezes": 500
+    },
+    "sub_du5": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "du5.png",
+        "threshold": 0.995,
+        "action": "Click",
+        "post_wait_freezes": 500
+    },
+    "sub_du6": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "du6.png",
+        "threshold": 0.995,
+        "action": "Click",
+        "post_wait_freezes": 500
+    },
+    "sub_du7": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "du7.png",
+        "threshold": 0.995,
+        "action": "Click",
+        "post_wait_freezes": 500
+    },
+    "schoolticket0": {
+        "recognition": "TemplateMatch",
+        "template": "0-7.png",
+        "next": [
+            "home",
+            "sub_schoolback"
         ]
     }
 }

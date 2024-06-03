@@ -3,6 +3,7 @@
         "next": [
             "home",
             "sub_closeinfo",
+            "sub_daily",
             "sub_loading",
             "Clickstart",
             "sub_update",
@@ -13,12 +14,19 @@
             "sub_startapp"
         ]
     },
+    "sub_daily": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "每日奖励.png",
+        "action": "Click",
+        "post_wait_freezes": 2000
+    },
     "sub_loading": {
         "is_sub": true,
         "recognition": "TemplateMatch",
         "green_mask": true,
         "template": "loading.png",
-        "post_wait_freezes": 7000
+        "post_wait_freezes": 4000
     },
     "sub_update": {
         "is_sub": true,
@@ -63,6 +71,7 @@
         "recognition": "TemplateMatch",
         "template": "yostar.png",
         "next": [
+            "sub_daily",
             "sub_yostarlogo",
             "sub_catalog",
             "ipban",
@@ -85,6 +94,7 @@
         "post_wait_freezes": 7000,
         "next": [
             "home",
+            "sub_daily",
             "sub_closeinfo",
             "sub_loading"
         ]

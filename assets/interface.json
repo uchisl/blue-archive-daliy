@@ -37,6 +37,10 @@
         {
             "name": "咖啡厅",
             "entry": "cafe"
+        },
+        {
+            "name": "课程表",
+            "entry": "school"
         }
     ]
 }
