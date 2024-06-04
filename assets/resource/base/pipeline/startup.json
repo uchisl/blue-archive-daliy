@@ -108,6 +108,7 @@
     "home": {
         "recognition": "TemplateMatch",
         "template": "home.png",
+        "green_mask": true,
         "action": "DoNothing"
     }
 }

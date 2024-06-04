@@ -2,6 +2,7 @@
     "cafe": {
         "recognition": "TemplateMatch",
         "template": "home.png",
+        "green_mask": true,
         "next": [
             "incafe"
         ]
@@ -76,7 +77,8 @@
         "is_sub": true,
         "recognition": "TemplateMatch",
         "template": "back.png",
-        "threshold": 0.8,
+        "green_mask": true,
+        "threshold": 0.7,
         "action": "Click",
         "pre_wait_freezes": 500
     }

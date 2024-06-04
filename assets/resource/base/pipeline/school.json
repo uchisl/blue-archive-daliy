@@ -2,6 +2,7 @@
     "school": {
         "recognition": "TemplateMatch",
         "template": "home.png",
+        "green_mask": true,
         "action": "DoNothing",
         "next": [
             "sub_inschool",
@@ -87,6 +88,7 @@
     "in_schoolticket4": {
         "recognition": "TemplateMatch",
         "template": "in4-7.png",
+        "threshold": 0.99,
         "next": [
             "out_schoolticket4",
             "sub_schoolback"
@@ -182,6 +184,7 @@
     "schoolticket0": {
         "recognition": "TemplateMatch",
         "template": "0-7.png",
+        "threshold": 0.99,
         "next": [
             "home",
             "sub_schoolback"
