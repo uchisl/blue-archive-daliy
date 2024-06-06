@@ -41,6 +41,10 @@
         {
             "name": "课程表",
             "entry": "school"
+        },
+        {
+            "name": "社团体力",
+            "entry": "clubs"
         }
     ]
 }
